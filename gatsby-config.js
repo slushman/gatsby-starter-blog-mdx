@@ -74,16 +74,16 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMdx } }) => {
-              return allMdx.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
+            serialize: ( { query: { site, allMdx } } ) => {
+              return allMdx.edges.map( edge => {
+                return Object.assign( {}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   data: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.code.boy }],
-                })
-              })
+                  custom_elements: [ { 'content:encoded': edge.node.code.boy } ],
+                } )
+              } )
             },
 
             /* if you want to filter for only published posts, you can do
@@ -140,4 +140,4 @@ module.exports = {
       },
     },
   ],
-}
+};
