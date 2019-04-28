@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 
 import Bio from '../components/Bio';
