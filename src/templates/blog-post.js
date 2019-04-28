@@ -18,7 +18,7 @@ const BlogPostTemplate = ( { data, location, pageContext } ) => {
       <h1>{ post.frontmatter.title }</h1>
       <p
         style={ {
-          ...scale( -1 / 5 ),
+          ...scale( -1 / 5 ), 
           display: `block`,
           marginBottom: rhythm( 1 ),
           marginTop: rhythm( -1 ),

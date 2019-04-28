@@ -40,9 +40,15 @@
     "typography-theme-wordpress-2016": "^0.15.10"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "babel-jest": "^24.7.1",
+    "babel-preset-gatsby": "^0.1.11",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.11.1",
-    "prettier": "^1.14.2"
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.7.1",
+    "prettier": "^1.14.2",
+    "react-test-renderer": "^16.8.6"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
@@ -57,7 +63,7 @@
   "scripts": {
     "dev": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "test": "jest -- --watch",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
     "start": "npm run develop",
