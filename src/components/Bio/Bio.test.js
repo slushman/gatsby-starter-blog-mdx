@@ -25,8 +25,6 @@ describe('<Bio />', () => {
 		const wrapper = factory();
 		const foundImage = wrapper.find( 'Image' );
 		const foundTwitter = wrapper.find( 'a' );
-		console.log(foundImage.props());
-		console.log(wrapper.debug());
 
 		expect( wrapper.exists() ).toBe( true );
 		expect( foundImage.prop( 'alt' ) ).toBe( defaultProps.author );

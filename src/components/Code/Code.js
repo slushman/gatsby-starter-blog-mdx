@@ -1,7 +1,7 @@
 import React from 'react';
-import { render } from 'react-dom';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
+import PropTypes from 'prop-types';
 
 const Code = ( { codeString, language, ...props } ) => {
   if ( props[ 'react-live' ] ) {
@@ -29,6 +29,16 @@ const Code = ( { codeString, language, ...props } ) => {
       </Highlight>
     )
   }
+};
+
+Code.propTypes = {
+  codeString: PropTypes.string.isRequired,
+  language: PropTypes.string.isRequired,
+  'react-live': PropTypes.bool,
+};
+
+Code.defaultProps = {
+  'react-live': false,
 };
 
 export default Code;
