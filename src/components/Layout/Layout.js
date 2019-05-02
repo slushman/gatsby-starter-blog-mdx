@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 
-import { rhythm, scale } from '../utils/typography';
+import { rhythm, scale } from '../../utils/typography';
 
-const Layout = ( { location, title, children } ) => {
+const Layout = ( { children, location, title } ) => {
   const rootPath = `${ __PATH_PREFIX__ }/`
   let header;
 
@@ -68,6 +69,12 @@ const Layout = ( { location, title, children } ) => {
       </footer>
     </div>
   )
+};
+
+Layout.propTypes = {
+  children: PropTypes.any,
+  location: PropTypes.object.isRequired,
+  title: PropTypes.string,
 };
 
 export default Layout;
