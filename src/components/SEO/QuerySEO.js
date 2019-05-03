@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
 
+import SEO from './SEO';
+
 const QuerySEO = ( { description, lang, meta, keywords, title } ) => {
   const data = useStaticQuery( detailsQuery );
 
