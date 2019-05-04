@@ -15,8 +15,8 @@ const Post = ( { date, excerpt, slug, title } ) => (
 				{ title }
 			</Link>
 		</h3>
-		<small>{ date }</small>
-		<p dangerouslySetInnerHTML={ { __html: excerpt } } />
+		<small data-test="postDate">{ date }</small>
+		<p data-test="postExcerpt" dangerouslySetInnerHTML={ { __html: excerpt } } />
 	</div>
 );
 
