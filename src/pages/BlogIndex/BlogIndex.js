@@ -17,6 +17,7 @@ const BlogIndex = ( { location, posts, siteTitle } ) => (
 			<Post
 				date={ node.frontmatter.date }
 				excerpt={ node.excerpt }
+				key={ node.fields.slug }
 				slug={ node.fields.slug }
 				title={ node.frontmatter.title || node.fields.slug }
 			/>
