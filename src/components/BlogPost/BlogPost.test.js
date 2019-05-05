@@ -1,6 +1,6 @@
 import { shallowFactory } from '../../../testutils';
 
-import BlogPostTemplate from './BlogPostTemplate';
+import BlogPost from './BlogPost';
 
 const defaultProps = {
 	location: {
@@ -38,9 +38,9 @@ const defaultProps = {
 	siteTitle: '',
 };
 
-const factory = shallowFactory(BlogPostTemplate, defaultProps);
+const factory = shallowFactory(BlogPost, defaultProps);
 
-describe('<BlogPostTemplate />', () => {
+describe('<BlogPost />', () => {
   it('renders without crashing', () => {
 		const wrapper = factory();
 		const foundNext = wrapper.find('[data-test="nextLink"]');

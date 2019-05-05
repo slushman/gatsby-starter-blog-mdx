@@ -1,20 +1,19 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import BlogPostTemplate from './BlogPostTemplate';
+import BlogPost from '../components/BlogPost';
 
-const QueryBlogPostTemplate = ( { data, location, pageContext } ) => (
-  <BlogPostTemplate
-    location={ location }
-    next={ pageContext.next }
-    post={ data.mdx }
-    postTitle={ post.frontmatter.title }
-    previous={ pageContext.previous }
-    siteTitle={ data.site.siteMetadata.title }
-  />
+const BlogPostTemplate = ( { data, location, pageContext } ) => (
+	<BlogPost
+		location={ location }
+		next={ pageContext.next }
+		post={ data.mdx }
+		previous={ pageContext.previous }
+		siteTitle={ data.site.siteMetadata.title }
+	/>
 );
 
-export default QueryBlogPostTemplate;
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query($slug: String!) {

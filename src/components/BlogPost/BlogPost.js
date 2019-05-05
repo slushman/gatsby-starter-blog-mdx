@@ -3,12 +3,12 @@ import { Link } from 'gatsby';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import PropTypes from 'prop-types';
 
-import Bio from '../../components/Bio';
-import Layout from '../../components/Layout';
-import SEO from '../../components/SEO';
+import Bio from '../Bio';
+import Layout from '../Layout';
+import SEO from '../SEO';
 import { rhythm, scale } from '../../utils/typography';
 
-const BlogPostTemplate = ( { location, next, post, previous, siteTitle } ) => (
+const BlogPost = ( { location, next, post, previous, siteTitle } ) => (
   <Layout location={ location } title={ siteTitle }>
     <SEO title={ post.frontmatter.title } description={ post.excerpt } />
     <h1>{ post.frontmatter.title }</h1>
@@ -58,7 +58,7 @@ const BlogPostTemplate = ( { location, next, post, previous, siteTitle } ) => (
   </Layout>
 );
 
-BlogPostTemplate.propTypes = {
+BlogPost.propTypes = {
   location: PropTypes.object.isRequired,
   next: PropTypes.object.isRequired,
   post: PropTypes.object.isRequired,
@@ -66,4 +66,4 @@ BlogPostTemplate.propTypes = {
   siteTitle: PropTypes.string.isRequired,
 };
 
-export default BlogPostTemplate;
+export default BlogPost;
