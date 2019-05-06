@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Bio from '../../components/Bio';
 import Layout from '../../components/Layout';
 import Post from '../../components/Post';
 import SEO from '../../components/SEO';
@@ -12,7 +11,6 @@ const BlogIndex = ( { location, posts, siteTitle } ) => (
 			title="All posts"
 			keywords={ [ `blog`, `gatsby`, `javascript`, `react` ] }
 		/>
-		<Bio />
 		{ posts.map( ( { node } ) => (
 			<Post
 				date={ node.frontmatter.date }

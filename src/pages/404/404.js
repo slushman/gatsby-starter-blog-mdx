@@ -5,9 +5,10 @@ import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
 
 const NotFoundPage = ( { location } ) => {
+  const title = '404: Not Found';
   return (
-    <Layout location={ location }>
-      <SEO title="404: Not Found" />
+    <Layout location={ location } title={ title }>
+      <SEO title={ title } />
       <h1>Not Found</h1>
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
     </Layout>
