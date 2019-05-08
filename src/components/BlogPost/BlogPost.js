@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import PropTypes from 'prop-types';
 
+import FlexList from '../FlexList';
 import Bio from '../Bio';
 import Layout from '../Layout';
 import SEO from '../SEO';
@@ -31,15 +32,7 @@ const BlogPost = ( { location, next, post, previous, siteTitle } ) => (
     />
     <Bio />
 
-    <ul
-      style={ {
-        display: `flex`,
-        flexWrap: `wrap`,
-        justifyContent: `space-between`,
-        listStyle: `none`,
-        padding: 0,
-      } }
-    >
+    <FlexList>
       <li>
         { previous && (
           <Link data-test="previousLink" to={ previous.fields.slug } rel="prev">
@@ -54,7 +47,7 @@ const BlogPost = ( { location, next, post, previous, siteTitle } ) => (
           </Link>
         ) }
       </li>
-    </ul>
+    </FlexList>
   </Layout>
 );
 
